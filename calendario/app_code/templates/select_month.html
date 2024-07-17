@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Selecione o Mês{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h2 class="text-center">Selecione o mês - {{ year }}</h2>
+    <form method="post">
+      <div class="form-group">
+        <select name="month" class="form-control">
+          <option value="Janeiro" {% if current_month == 'Janeiro' %}selected{% endif %}>Janeiro</option>
+          <option value="Fevereiro" {% if current_month == 'Fevereiro' %}selected{% endif %}>Fevereiro</option>
+          <option value="Março" {% if current_month == 'Março' %}selected{% endif %}>Março</option>
+          <option value="Abril" {% if current_month == 'Abril' %}selected{% endif %}>Abril</option>
+          <option value="Maio" {% if current_month == 'Maio' %}selected{% endif %}>Maio</option>
+          <option value="Junho" {% if current_month == 'Junho' %}selected{% endif %}>Junho</option>
+          <option value="Julho" {% if current_month == 'Julho' %}selected{% endif %}>Julho</option>
+          <option value="Agosto" {% if current_month == 'Agosto' %}selected{% endif %}>Agosto</option>
+          <option value="Setembro" {% if current_month == 'Setembro' %}selected{% endif %}>Setembro</option>
+          <option value="Outubro" {% if current_month == 'Outubro' %}selected{% endif %}>Outubro</option>
+          <option value="Novembro" {% if current_month == 'Novembro' %}selected{% endif %}>Novembro</option>
+          <option value="Dezembro" {% if current_month == 'Dezembro' %}selected{% endif %}>Dezembro</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+    <div class="text-center mt-4">
+      <a href="{{ url_for('select_year') }}" class="btn btn-secondary">Voltar</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

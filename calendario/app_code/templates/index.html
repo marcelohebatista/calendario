@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1>Calendário Loja Cidade de Gravataí 143</h1>
+
+    <!-- Adicionar o logo aqui -->
+    <div class="my-4">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" style="height: 100px;">
+    </div>
+
+    <h2>Informe a senha</h2>
+</div>
+<form method="post" class="text-center">
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% if error %}
+<p class="text-danger text-center">{{ error }}</p>
+{% endif %}
+
+</br>
+</br>
+</br>
+<p>
+    <b>copyright </b> &#174; 2024 MB Tecnologia
+</p>
+
+{% endblock %}
