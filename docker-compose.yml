@@ -29,3 +29,8 @@ services:
       - "9003:9000"
       - "9004:9001"
     command: server /data --console-address ":9001"
+
+
+volumes:
+  app_code
+  minio_data:
